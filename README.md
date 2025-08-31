@@ -74,16 +74,13 @@ The server will run on:
 
 ```
 Book-Tracker/
-│── src/
-│   ├── routes/        # Express route handlers
-│   ├── controllers/   # Business logic
-│   ├── models/        # SQL models/queries
-│   ├── config/        # Database and environment config
-│   └── app.js         # Express app entry point
+│── Database/
+│   └── Erd.png
+│   └── Schema.sql
 │
-│── migrations/        # Database migration scripts
-│── tests/             # Unit and integration tests
-│── package.json       # Node.js dependencies
+│── src/               # coming soon ..
+│   └── app.js         # Express app entry
+│
 │── README.md          # Project documentation
 ```
 
@@ -100,7 +97,4 @@ Book-Tracker/
 
 - **Your Name** – [GitHub](https://github.com/FadyAdel310) | [LinkedIn](https://linkedin.com/in/fady-adel-58b429367)
 
-```
-
 ---
-```
