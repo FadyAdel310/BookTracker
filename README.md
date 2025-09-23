@@ -1,100 +1,129 @@
-# 📚 Book-Tracker
+# 📚 BookTracker
 
-Book-Tracker is a lightweight application designed to help users manage and organize their reading journey.  
-It allows you to track books you want to read, are currently reading, or have already finished.
+> A smart digital library & reading tracker web application.
+
+<!-- ![BookTrack Banner](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![GitHub License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![Made With](https://img.shields.io/badge/Made%20With-React%20|%20Node.js%20|%20PostgreSQL-orange?style=for-the-badge)   -->
+
+---
+
+## 🌟 Overview
+
+**BookTracker** is a modern **digital library and bookstore** platform where users can:
+
+- 🔍 Browse & search books
+- 🛒 Buy books securely after authentication
+- 📊 Track reading progress (_To Read → Reading → Finished_)
+- 👤 Manage personal library & purchases
+- ⚡ Admins can manage books, users, and transactions
+
+BookTrack makes it easy to **discover, purchase, and organize books** in one place.
 
 ---
 
 ## ✨ Features
 
-- Add books with details (title, author, genre, etc.)
-- Track reading status: **To Read**, **Reading**, **Finished**
-- Record progress, ratings, and personal notes
-- Organize books into categories
-- RESTful API built with **Express.js**
-- Data stored in a **SQL database**
+- 🔐 **Authentication** – secure signup/login with JWT
+- 📖 **Book Browsing** – explore by title, author, or category
+- 🛒 **Purchase Flow** – cart, checkout, and payment (Stripe/PayPal)
+- 📊 **Reading Tracker** – mark books as _To Read, Reading, Finished_
+- 👤 **User Dashboard** – personal library & order history
+- ⚙️ **Admin Panel** – manage books, users, and sales
 
 ---
 
-## 🔗 Live Demo
+## 🛠️ Tech Stack
 
-You can check the live version here:  
-👉 [Book-Tracker Live](https://your-live-link.com)
+**Frontend:**
+
+- React (Next.js)
+- TailwindCSS
+
+**Backend:**
+
+- Node.js (Express)
+- JWT Authentication
+
+**Database:**
+
+- MongoDB
+
+**Other Integrations:**
+
+- Stripe / PayPal (payments)
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### 🔧 Installation
 
-Make sure you have the following installed:
+1. Clone the repository
 
-- [Node.js](https://nodejs.org/) (v16+ recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- A SQL database (e.g., MySQL, PostgreSQL, or SQLite)
+```bash
+git clone https://github.com/FadyAdel310/BookTracker.git
+cd BookTracker
+```
 
-### Installation
+2. Install dependencies
 
-1. Clone the repository:
+```bash
+# Install backend dependencies
+cd backend && npm install
 
-   ```bash
-   git clone https://github.com/your-username/Book-Tracker.git
-   cd Book-Tracker
-   ```
+# Install frontend dependencies
+cd ../frontend && npm install
+```
 
-2. Install dependencies:
+3. Setup environment variables
+   Create a .env file in both backend/ and frontend/ folders with:
 
-   ```bash
-   npm install
-   ```
+```ini
+DATABASE_URL=your_database_url
+JWT_SECRET=your_secret_key
+STRIPE_KEY=your_stripe_key
+```
 
-3. Configure the database:
+4. Run the app
 
-   - Create a SQL database (e.g., `book_tracker_db`)
-   - Update the database connection settings in `config/db.js`
+```bash
+# Run backend
+cd backend && npm run dev
 
-4. Run database migrations (if available):
-
-   ```bash
-   npm run migrate
-   ```
-
-5. Start the server:
-
-   ```bash
-   npm start
-   ```
-
-The server will run on:
-👉 `http://localhost:3000`
+# Run frontend
+cd frontend && npm run dev
+```
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Book-Tracker/
-│── Database/
-│   └── Erd.png
-│   └── Schema.sql
-│
-│── src/               # coming soon ..
-│   └── app.js         # Express app entry
-│
-│── README.md          # Project documentation
+BookTrack/
+│── frontend/        # React/Next.js client
+│── backend/         # Node.js/Express server
+│── docs/            # Documentation (SRS, diagrams, etc.)
+│── .env.example     # Example environment variables
+│── README.md        # Project documentation
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🤝 Contributing
 
-- **Backend:** Node.js + Express.js
-- **Database:** SQL (MySQL / PostgreSQL / SQLite)
+Contributions are welcome! 🎉
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 👨‍💻 Author
+## 💡 Vision
 
-- **Your Name** – [GitHub](https://github.com/FadyAdel310) | [LinkedIn](https://linkedin.com/in/fady-adel-58b429367)
+BookTrack’s mission is to **make book discovery, purchase, and reading progress effortless** for everyone — from casual readers to avid bookworms.
 
----
+## 📚 _Read more. Track better._
