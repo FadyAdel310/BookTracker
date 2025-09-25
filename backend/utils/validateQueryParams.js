@@ -9,8 +9,6 @@ function validateQueryParams(queries, listOFvalid) {
     keyValid = false;
     for (let i = 0; i < listOFvalid.length; i++) {
       const element = listOFvalid[i];
-      console.log(key);
-      console.log(element);
       if (key === element) {
         keyValid = true;
         break;

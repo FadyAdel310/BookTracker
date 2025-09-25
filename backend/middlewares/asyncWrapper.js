@@ -1,7 +1,7 @@
-module.exports = (asyncFn) => {
+module.exports = (asyncFun) => {
   return (req, res, next) => {
-    asyncFn(req, res, next).catch((err) => {
-      next(err);
+    asyncFun(req, res, next).catch((error) => {
+      next(error);
     });
   };
 };
