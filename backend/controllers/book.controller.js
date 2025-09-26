@@ -53,7 +53,25 @@ const getBookById = asyncWrapper(async (req, res, next) => {
   }
 });
 
+const deleteBookById = asyncWrapper(async (req, res, next) => {
+  const id = +req.params.id;
+  const book = await BookModel.find({ id: id });
+  if (book.length != 0) {
+    const deleteResponse = await BookModel.deleteOne({ id: id });
+    if (deleteResponse.deletedCount === 1) {
+      res.json(Jsend.success("deleted successfully"));
+    } else {
+      res.status(500).json(Jsend.fail("fails to delete"));
+    }
+  } else {
+    res.status(404).json(Jsend.fail({ id: "Invalid Book Id" }));
+  }
+});
+
+
+
 module.exports = {
   getAllBooks,
   getBookById,
+  deleteBookById,
 };

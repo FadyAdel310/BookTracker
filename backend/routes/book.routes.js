@@ -7,5 +7,6 @@ const router = express.Router();
 router.get("/", bookController.getAllBooks);
 
 router.get("/:id", bookController.getBookById);
+router.delete("/:id", bookController.deleteBookById);
 
 module.exports = router;

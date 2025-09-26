@@ -10,7 +10,7 @@ const dbConnection = async () => {
     .then(() => {
       console.log("Database connected succesfully ..");
     })
-    .catch((e) => console.log("Error while database connection .."));
+    .catch((e) => console.log("Error while database connection ..", e.message));
 };
 
 module.exports = dbConnection;
