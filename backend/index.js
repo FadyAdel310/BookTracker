@@ -14,6 +14,8 @@ dbConnection();
 const bookRouter = require("./routes/book.routes.js");
 const Jsend = require("./utils/JsendSpecs.js");
 
+app.use(express.json());
+
 app.use("/api/books", bookRouter);
 
 app.use((errorObj, req, res, next) => {
