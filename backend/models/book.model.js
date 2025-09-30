@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const bookObj = {
-  id: { type: Number, required: true, unique: true },
+  id: { type: Number, required: false, unique: true },
   title: { type: String, required: true, unique: true },
   author: { type: String, required: true },
   price: { type: Number, required: true },

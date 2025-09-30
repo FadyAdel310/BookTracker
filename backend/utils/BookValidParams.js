@@ -9,4 +9,5 @@ const validQueryParams = [
   "maxprice",
 ];
 const validEditParams = ["title", "author", "category", "price"];
-module.exports = { validQueryParams, validEditParams };
+const validAddParams = ["title", "author", "category", "price"];
+module.exports = { validQueryParams, validEditParams, validAddParams };

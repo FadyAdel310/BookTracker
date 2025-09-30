@@ -19,5 +19,7 @@ app.use(express.json());
 app.use("/api/books", bookRouter);
 
 app.use((errorObj, req, res, next) => {
-  res.status(500).json(Jsend.error(500, errorObj.message, null));
+  res
+    .status(errorObj.code || 500)
+    .json(Jsend.error(errorObj.code || 500, errorObj.message, null));
 });
